@@ -1,0 +1,59 @@
+<head>
+  <title>demo</title>
+</head>
+
+
+<body>
+
+
+  <div class = "ui inverted menu">
+      <a class="active item">
+     <i class="icon"></i> CS Demo App
+        </a>
+
+
+      <a class = "item">
+            {{> loginButtons}}
+        </a>
+
+    </div>
+    {{#if currentUser}}
+<div id = "form">
+    <form class = "new-task ui inverted form">
+    <input type="text" name="text" placeholder="New Post!" />
+    </form>
+
+</div>
+
+<div id = "body">
+    {{#each tasks}}
+        {{>task}}
+    {{/each}}
+</div>
+{{/if}}
+</body>
+
+
+<template name="task">
+<div class ="ui teal inverted segment">
+    <!-- THE 3 BUTTONS! -->
+    <div class="ui icon button delete ">
+    <i class="remove icon"></i>
+   </div>
+    <div class="positive ui button"><i class="thumbs up icon"></i></div>
+
+    <div id = "tag" class = "ui primary button">
+     {{count}}
+  </div>
+  <div class="negative ui button"><i class="thumbs down icon"></i></div>
+
+  <!-- THE 3 BUTTONS! -->
+
+  <li class="{{#if checked}}checked{{/if}}">
+
+    <span class="text"><strong>{{username}}</strong> - {{createdAt}} </span>
+     <br><br>
+     {{text}}
+ </li>
+  </div>
+</template>

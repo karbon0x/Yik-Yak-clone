@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+.button
+{
+    float: right;
+}
+body
+{
+    background-color: #000000;
+}
+.segment
+{
+    max-width:100%;
+}
+#form
+{
+    padding-bottom: 30px;
+}
